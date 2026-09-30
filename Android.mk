@@ -54,6 +54,7 @@ srcs +=	adbg/src/adbg_case.c \
 	regression_8100.c \
 	hash_perf.c \
 	install_ta.c \
+	trng_perf.c \
 	stats.c \
 	symm_cipher_perf.c \
 	xtest_helpers.c \
@@ -108,6 +109,7 @@ LOCAL_C_INCLUDES += $(LOCAL_PATH)/host/xtest \
 		$(LOCAL_PATH)/ta/concurrent/include \
 		$(LOCAL_PATH)/ta/concurrent_large/include \
 		$(LOCAL_PATH)/ta/crypto_perf/include \
+		$(LOCAL_PATH)/ta/trng_perf/include \
 		$(LOCAL_PATH)/ta/socket/include \
 		$(LOCAL_PATH)/ta/sdp_basic/include \
 		$(LOCAL_PATH)/ta/tpm_log_test/include \

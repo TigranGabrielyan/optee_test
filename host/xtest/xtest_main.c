@@ -29,6 +29,7 @@
 #include "install_ta.h"
 #include "pkcs11_1000.h"
 #include "stats.h"
+#include "trng_perf.h"
 
 ADBG_SUITE_DEFINE(benchmark);
 #ifdef WITH_GP_TESTS
@@ -104,6 +105,7 @@ void usage(char *program)
 	printf("\t--hash-perf [opts] Hash performance testing tool (-h for usage)\n");
 	printf("\t--aes-perf [opts]  AES performance testing tool (-h for usage)\n");
 	printf("\t--asym-perf [opts]  Asym performance testing tool (-h for usage)\n");
+	printf("\t--trng-perf [opts]  RCAR TRNG (rsipm_trng_generate) performance testing tool (-h for usage)\n");
 	printf("\t--install-ta [directory or list of TAs]\n");
 	printf("\t                   Install TAs\n");
 #ifdef CFG_SECURE_DATA_PATH
@@ -170,6 +172,8 @@ int main(int argc, char *argv[])
 		return aes_perf_runner_cmd_parser(argc-1, &argv[1]);
 	else if (argc > 1 && !strcmp(argv[1], "--asym-perf"))
 		return asym_perf_runner_cmd_parser(argc-1, &argv[1]);
+	else if (argc > 1 && !strcmp(argv[1], "--trng-perf"))
+		return trng_perf_runner_cmd_parser(argc-1, &argv[1]);
 	else if (argc > 1 && !strcmp(argv[1], "--install-ta"))
 		return install_ta_runner_cmd_parser(argc - 1, argv + 1);
 #ifdef CFG_SECURE_DATA_PATH

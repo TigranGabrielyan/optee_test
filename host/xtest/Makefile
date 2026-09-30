@@ -75,6 +75,7 @@ srcs +=	adbg/src/adbg_case.c \
 	install_ta.c \
 	stats.c \
 	symm_cipher_perf.c \
+	trng_perf.c \
 	xtest_helpers.c \
 	xtest_main.c \
 	xtest_test.c \
@@ -124,6 +125,7 @@ CFLAGS += -I../../ta/storage_benchmark/include
 CFLAGS += -I../../ta/concurrent/include
 CFLAGS += -I../../ta/concurrent_large/include
 CFLAGS += -I../../ta/crypto_perf/include
+CFLAGS += -I../../ta/trng_perf/include
 CFLAGS += -I../../ta/socket/include
 CFLAGS += -I../../ta/sdp_basic/include
 CFLAGS += -I../../ta/tpm_log_test/include

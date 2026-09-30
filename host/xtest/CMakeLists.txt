@@ -60,6 +60,7 @@ set (SRC
 	install_ta.c
 	stats.c
 	symm_cipher_perf.c
+	trng_perf.c
 	xtest_helpers.c
 	xtest_main.c
 	xtest_test.c
